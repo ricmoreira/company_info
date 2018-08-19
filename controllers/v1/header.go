@@ -47,13 +47,10 @@ func (pc HeaderController) CreateAction(c *gin.Context) {
 // ListAction list Headers
 func (pc HeaderController) ListAction(c *gin.Context) {
 	validSorts := map[string]string{}
-	validSorts["HeaderNo"] = "HeaderNo"
-	validSorts["MovementStartTime"] = "MovementStartTime"
 	validSorts["_id"] = "_id"
 
 	validFilters := map[string]string{}
-	validFilters["HeaderNo"] = "HeaderNo"
-	validFilters["CustomerID"] = "CustomerID"
+	validFilters["TaxRegistrationNumber"] = "TaxRegistrationNumber"
 	validFilters["_id"] = "_id"
 
 	qValues := c.Request.URL.Query()
