@@ -66,7 +66,7 @@ func NewDBCollections(config *config.Config) *DBCollections {
 	db := client.Database(config.MongoDatabaseName)
 
 	// set headers index
-	keys, err := bson.ParseExtJSONObject(`{ "TaxRegistrationNumber": 1}`)
+	keys, err := bson.ParseExtJSONObject(`{ "StartDate": 1, "EndDate": 1, "TaxRegistrationNumber": 1 }`)
 	options, err := bson.ParseExtJSONObject(`{ "unique": true }`)
 	if err != nil {
 		log.Fatal(err)
